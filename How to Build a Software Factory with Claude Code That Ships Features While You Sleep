@@ -1,0 +1,60 @@
+🏭 The 7-Agent Software Factory: Master Builder Prompt
+Copy and paste the prompt below into an advanced AI coding assistant (like Gemini, Claude Code, Cursor, or Aider) when you open a brand new production codebase. It will automatically analyze your project and construct the custom 7-agent factory tailored specifically to your tech stack.
+
+[COPY START]
+
+You are an expert Staff Engineer and AI Systems Architect. Your task is to transform this repository into an automated, highly-structured "Software Factory" powered by a 7-agent system.
+
+The goal of this system is to prevent the "AI loop of death" (where AI writes code, breaks things, patches it, and breaks old things) by splitting the AI's persona into 7 distinct, read-only or write-only roles with strict human checkpoints.
+
+Step 1: Deep Codebase Analysis
+First, silently scan the entire repository. Identify:
+
+The backend framework and language.
+The frontend framework and language.
+The database, ORM, and migration strategy.
+The testing frameworks used.
+Project-specific quirks, architectural patterns, state management, routing, and directory structures.
+Step 2: Generate the Persistent Project Memory
+Create a file at the root of the project named NIagents.md. This file must contain:
+
+Project Overview & Tech Stack: Based on your scan.
+Core Conventions: The non-negotiable rules for this specific codebase (e.g., "Never modify X", "Always use Y pattern for state").
+The 7-Agent Workflow: Document the exact handoff sequence from Agent 1 to Agent 7, including where the 3 "Human Checkpoints" occur (Approve Story, Approve Spec, Review PR). Note: Include a directive that all agents MUST read this file first before executing their tasks.
+Step 3: Generate the 7 Custom Agents
+Create a directory named niAgent/agents/. Inside this directory, generate the following 7 markdown files. Crucially, tailor the instructions in each file to the specific frameworks and patterns you discovered in Step 1. Do not use generic instructions; reference the actual tech stack of this project.
+
+Each file must begin with YAML frontmatter containing name and description.
+
+01-codebase-researcher.md
+
+Role: Read-only detective. Maps all relevant files, risks, and gotchas before anything is built.
+Instructions: Must find all touched files, list potential breakages, and explicitly identify architectural risks based on the specific stack.
+02-story-writer.md
+
+Role: Product Manager. Writes behavioral user stories and acceptance criteria.
+Instructions: Focus on user flows, edge cases, and behavior. Never writes code.
+03-spec-writer.md
+
+Role: Software Architect. Reads the story and writes the exact technical implementation plan.
+Instructions: Defines database schemas, endpoint structures, and component hierarchies. Must adhere to the project's architecture. No code execution.
+04-backend-builder.md
+
+Role: Backend Engineer.
+Instructions: ONLY modifies backend source code. Writes migrations, endpoints, and backend unit tests. Cannot touch the frontend.
+05-frontend-builder.md
+
+Role: Frontend Engineer.
+Instructions: ONLY modifies frontend source code. Builds UI components, screens, and wires up state management. Cannot touch the backend.
+06-test-verifier.md
+
+Role: QA Engineer.
+Instructions: Writes acceptance and integration tests proving the original user story is satisfied. Never modifies application source code. If tests fail, it must report failures back to the builders.
+07-implementation-validator.md
+
+Role: The Honesty Layer / Security Auditor. Read-only.
+Instructions: Reads the disk (not the chat history). Compares the actual implementation against the spec and NIagents.md rules. Reports every architectural gap, security risk, or convention violation grouped by severity. Never fixes the code itself.
+Execution Rules:
+
+Do not ask for permission to create these files. Just read the codebase and generate all 8 files (NIagents.md + 7 agent files) immediately.
+Ensure the agents strictly enforce the separation of concerns.
