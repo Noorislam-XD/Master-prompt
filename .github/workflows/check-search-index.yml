@@ -1,0 +1,73 @@
+name: Check SEARCH.md Updated
+
+on:
+  pull_request:
+    paths:
+      - 'coding/**'
+      - 'business/**'
+      - 'research/**'
+      - 'writing/**'
+      - 'productivity/**'
+      - 'education/**'
+      - 'creative/**'
+      - 'agents/**'
+
+jobs:
+  check-search:
+    name: Verify SEARCH.md includes new prompts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get new prompt files
+        id: new_files
+        run: |
+          FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD \
+            | grep -E '^(coding|business|research|writing|productivity|education|creative|agents)/.*\.md$' \
+            | grep -v 'README.md' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Check SEARCH.md references new files
+        run: |
+          FILES="${{ steps.new_files.outputs.files }}"
+
+          if [ -z "$FILES" ]; then
+            echo "No new prompt files added. Skipping SEARCH.md check."
+            exit 0
+          fi
+
+          PASS=true
+          ERRORS=""
+
+          for FILE in $FILES; do
+            FILENAME=$(basename "$FILE")
+            if ! grep -q "$FILENAME" SEARCH.md; then
+              PASS=false
+              ERRORS="$ERRORS\n❌ $FILE — not referenced in SEARCH.md"
+            else
+              echo "✅ $FILENAME found in SEARCH.md"
+            fi
+          done
+
+          if [ "$PASS" = false ]; then
+            echo ""
+            echo "=============================="
+            echo "SEARCH.md NOT UPDATED"
+            echo "=============================="
+            echo -e "$ERRORS"
+            echo ""
+            echo "Add your new prompt(s) to SEARCH.md under the relevant goal and audience sections."
+            echo "See CONTRIBUTING.md for instructions."
+            exit 1
+          else
+            echo ""
+            echo "=============================="
+            echo "SEARCH.md is up to date ✅"
+            echo "=============================="
+          fi
