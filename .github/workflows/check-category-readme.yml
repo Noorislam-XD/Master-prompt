@@ -1,0 +1,74 @@
+name: Check Category README Updated
+
+on:
+  pull_request:
+    paths:
+      - 'coding/**'
+      - 'business/**'
+      - 'research/**'
+      - 'writing/**'
+      - 'productivity/**'
+      - 'education/**'
+      - 'creative/**'
+      - 'agents/**'
+
+jobs:
+  check-readme:
+    name: Verify category README lists new prompts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get new prompt files and check their category README
+        run: |
+          FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD \
+            | grep -E '^(coding|business|research|writing|productivity|education|creative|agents)/.*\.md$' \
+            | grep -v 'README.md' || true)
+
+          if [ -z "$FILES" ]; then
+            echo "No new prompt files added. Skipping README check."
+            exit 0
+          fi
+
+          PASS=true
+          ERRORS=""
+
+          for FILE in $FILES; do
+            CATEGORY=$(echo "$FILE" | cut -d'/' -f1)
+            FILENAME=$(basename "$FILE")
+            README="$CATEGORY/README.md"
+
+            if [ ! -f "$README" ]; then
+              PASS=false
+              ERRORS="$ERRORS\n❌ $CATEGORY/README.md does not exist"
+              continue
+            fi
+
+            if ! grep -q "$FILENAME" "$README"; then
+              PASS=false
+              ERRORS="$ERRORS\n❌ $FILENAME — not listed in $README"
+            else
+              echo "✅ $FILENAME found in $README"
+            fi
+          done
+
+          if [ "$PASS" = false ]; then
+            echo ""
+            echo "=============================="
+            echo "CATEGORY README NOT UPDATED"
+            echo "=============================="
+            echo -e "$ERRORS"
+            echo ""
+            echo "Add a row for your new prompt in the category's README.md table."
+            echo "See CONTRIBUTING.md for the correct format."
+            exit 1
+          else
+            echo ""
+            echo "=============================="
+            echo "All category READMEs up to date ✅"
+            echo "=============================="
+          fi
