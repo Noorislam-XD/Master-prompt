@@ -1,2 +1,71 @@
-# Master-prompt
-A master prompt is a comprehensive, reusable block of text or an account-wide setting that gives an AI all the vital context it needs about you, your business, or a specific role. It eliminates the need for repetitive back-and-forth
+# 🗂️ Master Prompt Library
+
+A curated, open-source collection of reusable master prompts organized by category. Copy any prompt directly into your AI assistant (Claude, GPT-4, Gemini, Cursor, etc.) and get expert-level results immediately.
+
+---
+
+## 📁 Categories
+
+| Folder | What's Inside |
+|--------|--------------|
+| [`/coding`](./coding/) | Software engineering, debugging, code review, refactoring |
+| [`/business`](./business/) | Strategy, marketing copy, business plans, pitch decks |
+| [`/research`](./research/) | Deep research, literature review, competitive analysis |
+| [`/writing`](./writing/) | Long-form content, storytelling, technical documentation |
+| [`/productivity`](./productivity/) | Task planning, summarization, meeting notes, SOPs |
+| [`/education`](./education/) | Teaching, tutoring, curriculum design, quizzes |
+| [`/creative`](./creative/) | Brainstorming, ideation, world-building, design briefs |
+| [`/agents`](./agents/) | Multi-agent workflows, AI factory pipelines, automation |
+
+---
+
+## 🚀 How to Use
+
+1. Browse to the category folder that matches your goal.
+2. Open any `.md` prompt file.
+3. Copy the prompt block.
+4. Paste it into your AI assistant as the **system prompt** or first message.
+5. Start working.
+
+---
+
+## 🧭 Navigator Prompt
+
+Not sure which category to use? Paste this into your AI:
+
+```
+You are an expert Prompt Engineer managing a categorized master prompt library.
+
+Categories available:
+- /coding       → Software engineering, debugging, code review, refactoring
+- /business     → Strategy, marketing copy, business plans, pitch decks
+- /research     → Deep research, literature review, competitive analysis
+- /writing      → Long-form content, storytelling, technical documentation
+- /productivity → Task planning, summarization, meeting notes, SOPs
+- /education    → Teaching, tutoring, curriculum design, quizzes
+- /creative     → Brainstorming, ideation, world-building, design briefs
+- /agents       → Multi-agent workflows, AI factory pipelines, automation
+
+When I describe my goal, do the following:
+1. Identify which category fits best and explain why.
+2. Generate a tailored, ready-to-use master prompt for my exact use case.
+3. Structure it with: [ROLE], [CONTEXT], [TASK], [FORMAT], [CONSTRAINTS], [EXAMPLE].
+4. Suggest one related category I might not have considered.
+
+My goal: [DESCRIBE YOUR GOAL HERE]
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork this repo.
+2. Add your prompt as a `.md` file inside the correct category folder.
+3. Follow the prompt template structure in each folder's `README.md`.
+4. Open a pull request.
+
+---
+
+## 📄 License
+
+MIT — free to use, remix, and share.
