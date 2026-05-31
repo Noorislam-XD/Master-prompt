@@ -1,0 +1,97 @@
+name: Validate Prompt Files
+
+on:
+  pull_request:
+    paths:
+      - 'coding/**'
+      - 'business/**'
+      - 'research/**'
+      - 'writing/**'
+      - 'productivity/**'
+      - 'education/**'
+      - 'creative/**'
+      - 'agents/**'
+
+jobs:
+  validate:
+    name: Check Prompt Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed prompt files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
+            | grep -E '^(coding|business|research|writing|productivity|education|creative|agents)/.*\.md$' \
+            | grep -v 'README.md' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Validate required sections
+        run: |
+          PASS=true
+          ERRORS=""
+
+          FILES="${{ steps.changed.outputs.files }}"
+
+          if [ -z "$FILES" ]; then
+            echo "No prompt files changed. Skipping validation."
+            exit 0
+          fi
+
+          for FILE in $FILES; do
+            echo "Checking: $FILE"
+            MISSING=""
+
+            grep -q '\[ROLE\]'        "$FILE" || MISSING="$MISSING [ROLE]"
+            grep -q '\[CONTEXT\]'     "$FILE" || MISSING="$MISSING [CONTEXT]"
+            grep -q '\[TASK\]'        "$FILE" || MISSING="$MISSING [TASK]"
+            grep -q '\[FORMAT\]'      "$FILE" || MISSING="$MISSING [FORMAT]"
+            grep -q '\[CONSTRAINTS\]' "$FILE" || MISSING="$MISSING [CONSTRAINTS]"
+            grep -q '\[EXAMPLE\]'     "$FILE" || MISSING="$MISSING [EXAMPLE]"
+
+            if [ -n "$MISSING" ]; then
+              PASS=false
+              ERRORS="$ERRORS\n❌ $FILE — missing sections:$MISSING"
+            else
+              echo "  ✅ All 6 sections present"
+            fi
+
+            # Check for YAML frontmatter
+            HEAD=$(head -1 "$FILE")
+            if [ "$HEAD" != "---" ]; then
+              PASS=false
+              ERRORS="$ERRORS\n❌ $FILE — missing YAML frontmatter (file must start with ---)"
+            else
+              echo "  ✅ YAML frontmatter present"
+            fi
+
+            # Check frontmatter has name, description, category
+            if grep -q '^---' "$FILE"; then
+              grep -q '^name:' "$FILE"        || { PASS=false; ERRORS="$ERRORS\n❌ $FILE — frontmatter missing 'name:' field"; }
+              grep -q '^description:' "$FILE" || { PASS=false; ERRORS="$ERRORS\n❌ $FILE — frontmatter missing 'description:' field"; }
+              grep -q '^category:' "$FILE"    || { PASS=false; ERRORS="$ERRORS\n❌ $FILE — frontmatter missing 'category:' field"; }
+            fi
+          done
+
+          if [ "$PASS" = false ]; then
+            echo ""
+            echo "=============================="
+            echo "VALIDATION FAILED"
+            echo "=============================="
+            echo -e "$ERRORS"
+            echo ""
+            echo "Fix the issues above. See CONTRIBUTING.md for the required prompt format."
+            exit 1
+          else
+            echo ""
+            echo "=============================="
+            echo "ALL PROMPTS VALID ✅"
+            echo "=============================="
+          fi
