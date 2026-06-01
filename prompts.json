@@ -1,14 +1,19 @@
 {
-  "version": "1.4.0",
-  "total": 44,
+  "version": "1.5.0",
+  "total": 71,
   "categories": [
     "agents",
+    "anthropic",
     "business",
     "coding",
     "creative",
     "education",
+    "google",
+    "meta",
+    "microsoft",
     "openai",
     "productivity",
+    "prompt-engineering",
     "research",
     "writing"
   ],
@@ -40,6 +45,54 @@
       "description": "Full multi-agent pipeline for shipping features without regression",
       "file": "agents/software-factory.md",
       "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/agents/software-factory.md"
+    },
+    {
+      "name": "Document Q&A with Citations",
+      "category": "anthropic",
+      "description": "Answer questions from documents with precise, cited responses",
+      "file": "anthropic/document-qa.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/document-qa.md",
+      "technique": "Document Q&A"
+    },
+    {
+      "name": "Extended Thinking",
+      "category": "anthropic",
+      "description": "Give Claude dedicated thinking time before responding for hard problems",
+      "file": "anthropic/extended-thinking.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/extended-thinking.md",
+      "technique": "Extended Thinking"
+    },
+    {
+      "name": "Response Prefilling",
+      "category": "anthropic",
+      "description": "Control output format precisely by prefilling the start of Claude's response",
+      "file": "anthropic/prefill.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/prefill.md",
+      "technique": "Response Prefilling"
+    },
+    {
+      "name": "Prompt Chaining",
+      "category": "anthropic",
+      "description": "Break complex tasks into sequential sub-prompts, passing outputs forward",
+      "file": "anthropic/prompt-chaining.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/prompt-chaining.md",
+      "technique": "Prompt Chaining"
+    },
+    {
+      "name": "Role Prompting",
+      "category": "anthropic",
+      "description": "Assign expert personas to unlock domain-specific knowledge and tone",
+      "file": "anthropic/role-prompting.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/role-prompting.md",
+      "technique": "Role Prompting"
+    },
+    {
+      "name": "XML Tagging for Structure",
+      "category": "anthropic",
+      "description": "Use XML tags to clearly separate instructions, inputs, and outputs for Claude",
+      "file": "anthropic/xml-tagging.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/anthropic/xml-tagging.md",
+      "technique": "XML Structure"
     },
     {
       "name": "Business Plan Generator",
@@ -159,6 +212,126 @@
       "description": "Teach any subject using questions and guided discovery",
       "file": "education/tutor.md",
       "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/tutor.md"
+    },
+    {
+      "name": "Least-to-Most Prompting",
+      "category": "google",
+      "description": "Decompose hard problems into easier sub-problems and solve sequentially",
+      "file": "google/least-to-most.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/least-to-most.md",
+      "technique": "Least-to-Most Prompting"
+    },
+    {
+      "name": "Multimodal Prompting",
+      "category": "google",
+      "description": "Combine text and image inputs effectively for vision tasks",
+      "file": "google/multimodal.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/multimodal.md",
+      "technique": "Multimodal Prompting"
+    },
+    {
+      "name": "Self-Consistency",
+      "category": "google",
+      "description": "Generate multiple independent answers and take the majority vote for accuracy",
+      "file": "google/self-consistency.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/self-consistency.md",
+      "technique": "Self-Consistency"
+    },
+    {
+      "name": "Step-Back Prompting",
+      "category": "google",
+      "description": "Improve accuracy by asking the model to abstract to principles before solving",
+      "file": "google/step-back.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/step-back.md",
+      "technique": "Step-Back Prompting"
+    },
+    {
+      "name": "Gemini System Instructions",
+      "category": "google",
+      "description": "Structure effective system prompts for consistent Gemini behavior",
+      "file": "google/system-instruction.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/system-instruction.md",
+      "technique": "System Instructions"
+    },
+    {
+      "name": "Zero-Shot Chain-of-Thought",
+      "category": "google",
+      "description": "Trigger step-by-step reasoning with a single phrase \u2014 no examples needed",
+      "file": "google/zero-shot-cot.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/google/zero-shot-cot.md",
+      "technique": "Zero-Shot CoT"
+    },
+    {
+      "name": "Code Llama Prompt Format",
+      "category": "meta",
+      "description": "Correct prompt format for Meta's Code Llama models for programming tasks",
+      "file": "meta/code-llama.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/meta/code-llama.md",
+      "technique": "Code Generation"
+    },
+    {
+      "name": "Llama 3 Chat Template",
+      "category": "meta",
+      "description": "Correct Llama 3 instruct model message format for reliable responses",
+      "file": "meta/llama3-chat-template.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/meta/llama3-chat-template.md",
+      "technique": "Chat Template"
+    },
+    {
+      "name": "Llama 3 System Prompt Design",
+      "category": "meta",
+      "description": "Structure effective system prompts for Llama 3 instruct models",
+      "file": "meta/llama3-system-prompt.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/meta/llama3-system-prompt.md",
+      "technique": "System Prompt Design"
+    },
+    {
+      "name": "Llama Guard Safety Classification",
+      "category": "meta",
+      "description": "Use Meta's Llama Guard approach for content safety classification",
+      "file": "meta/safety-guardrails.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/meta/safety-guardrails.md",
+      "technique": "Safety Guardrails / Llama Guard"
+    },
+    {
+      "name": "Microsoft 365 Copilot Extension Design",
+      "category": "microsoft",
+      "description": "Design consistent, policy-following Microsoft 365 Copilot extensions",
+      "file": "microsoft/copilot-extension.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/microsoft/copilot-extension.md",
+      "technique": "Copilot Extension Design"
+    },
+    {
+      "name": "Grounding with Sources",
+      "category": "microsoft",
+      "description": "Anchor AI responses to trusted data sources to eliminate hallucination",
+      "file": "microsoft/grounding.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/microsoft/grounding.md",
+      "technique": "Grounding"
+    },
+    {
+      "name": "Meta Prompt (Prompt Generator)",
+      "category": "microsoft",
+      "description": "A prompt that writes optimized prompts for any task",
+      "file": "microsoft/meta-prompt.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/microsoft/meta-prompt.md",
+      "technique": "Meta Prompting"
+    },
+    {
+      "name": "Prompt Injection Defense",
+      "category": "microsoft",
+      "description": "Protect AI systems against adversarial instruction injection attacks",
+      "file": "microsoft/prompt-injection-defense.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/microsoft/prompt-injection-defense.md",
+      "technique": "Prompt Injection Defense"
+    },
+    {
+      "name": "Safety System Message",
+      "category": "microsoft",
+      "description": "Microsoft's recommended safety layer for responsible AI deployments",
+      "file": "microsoft/safety-system-message.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/microsoft/safety-system-message.md",
+      "technique": "Safety System Message"
     },
     {
       "name": "Chain-of-Thought Reasoning",
@@ -283,6 +456,54 @@
       "description": "Break any goal into a prioritized, realistic task list",
       "file": "productivity/task-planner.md",
       "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/productivity/task-planner.md"
+    },
+    {
+      "name": "Automatic Prompt Engineer (APE)",
+      "category": "prompt-engineering",
+      "description": "Let the AI generate and evaluate its own optimized prompts",
+      "file": "prompt-engineering/automatic-prompt-engineer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/automatic-prompt-engineer.md",
+      "technique": "Automatic Prompt Engineer"
+    },
+    {
+      "name": "Directional Stimulus Prompting",
+      "category": "prompt-engineering",
+      "description": "Guide outputs with subtle hints rather than explicit instructions",
+      "file": "prompt-engineering/directional-stimulus.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/directional-stimulus.md",
+      "technique": "Directional Stimulus Prompting"
+    },
+    {
+      "name": "Generated Knowledge Prompting",
+      "category": "prompt-engineering",
+      "description": "Have the AI generate relevant background knowledge before answering",
+      "file": "prompt-engineering/generated-knowledge.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/generated-knowledge.md",
+      "technique": "Generated Knowledge"
+    },
+    {
+      "name": "ReAct (Reason + Act)",
+      "category": "prompt-engineering",
+      "description": "Interleave reasoning and actions for reliable AI agent tasks",
+      "file": "prompt-engineering/react.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/react.md",
+      "technique": "ReAct"
+    },
+    {
+      "name": "Self-Refine",
+      "category": "prompt-engineering",
+      "description": "Iteratively improve AI output through self-critique and revision",
+      "file": "prompt-engineering/self-refine.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/self-refine.md",
+      "technique": "Self-Refine"
+    },
+    {
+      "name": "Tree of Thoughts (ToT)",
+      "category": "prompt-engineering",
+      "description": "Explore multiple reasoning paths simultaneously for complex decisions",
+      "file": "prompt-engineering/tree-of-thoughts.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/prompt-engineering/tree-of-thoughts.md",
+      "technique": "Tree of Thoughts"
     },
     {
       "name": "Deep Researcher",
