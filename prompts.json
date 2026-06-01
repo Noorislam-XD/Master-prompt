@@ -1,0 +1,240 @@
+{
+  "version": "1.0.0",
+  "total": 32,
+  "categories": [
+    "agents",
+    "business",
+    "coding",
+    "creative",
+    "education",
+    "productivity",
+    "research",
+    "writing"
+  ],
+  "prompts": [
+    {
+      "name": "Automated Content Pipeline",
+      "category": "agents",
+      "description": "Multi-agent workflow for creating consistent, high-quality content at scale",
+      "file": "agents/content-pipeline.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/agents/content-pipeline.md"
+    },
+    {
+      "name": "Autonomous QA Agent",
+      "category": "agents",
+      "description": "Autonomous quality assurance agent for software testing",
+      "file": "agents/qa-agent.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/agents/qa-agent.md"
+    },
+    {
+      "name": "Multi-Step Research Pipeline",
+      "category": "agents",
+      "description": "Automated multi-agent research, synthesis, and report generation",
+      "file": "agents/research-pipeline.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/agents/research-pipeline.md"
+    },
+    {
+      "name": "7-Agent Software Factory",
+      "category": "agents",
+      "description": "Full multi-agent pipeline for shipping features without regression",
+      "file": "agents/software-factory.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/agents/software-factory.md"
+    },
+    {
+      "name": "Business Plan Generator",
+      "category": "business",
+      "description": "Generate a structured, investor-ready business plan",
+      "file": "business/business-plan.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/business/business-plan.md"
+    },
+    {
+      "name": "Competitive Analysis Expert",
+      "category": "business",
+      "description": "Structured market and competitor research and positioning",
+      "file": "business/competitive-analysis.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/business/competitive-analysis.md"
+    },
+    {
+      "name": "Marketing Copywriter",
+      "category": "business",
+      "description": "High-converting ad copy, landing pages, and product descriptions",
+      "file": "business/marketing-copy.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/business/marketing-copy.md"
+    },
+    {
+      "name": "Pitch Deck Script Writer",
+      "category": "business",
+      "description": "Generate a compelling investor pitch deck narrative",
+      "file": "business/pitch-deck.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/business/pitch-deck.md"
+    },
+    {
+      "name": "API Designer",
+      "category": "coding",
+      "description": "Design clean, consistent REST or GraphQL APIs",
+      "file": "coding/api-designer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/coding/api-designer.md"
+    },
+    {
+      "name": "Code Reviewer",
+      "category": "coding",
+      "description": "Thorough pull request and code review persona",
+      "file": "coding/code-reviewer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/coding/code-reviewer.md"
+    },
+    {
+      "name": "Root-Cause Debugger",
+      "category": "coding",
+      "description": "Systematic debugging session to find and fix the true root cause",
+      "file": "coding/debugger.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/coding/debugger.md"
+    },
+    {
+      "name": "Refactor Expert",
+      "category": "coding",
+      "description": "Safe, incremental refactoring with zero behavior change",
+      "file": "coding/refactor-expert.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/coding/refactor-expert.md"
+    },
+    {
+      "name": "Senior Engineer",
+      "category": "coding",
+      "description": "General-purpose senior software engineer persona for any coding task",
+      "file": "coding/senior-engineer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/coding/senior-engineer.md"
+    },
+    {
+      "name": "Brainstormer",
+      "category": "creative",
+      "description": "Rapid divergent idea generation for any challenge or opportunity",
+      "file": "creative/brainstormer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/creative/brainstormer.md"
+    },
+    {
+      "name": "Design Brief Writer",
+      "category": "creative",
+      "description": "Write a clear, inspiring creative direction and design brief",
+      "file": "creative/design-brief.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/creative/design-brief.md"
+    },
+    {
+      "name": "Naming Expert",
+      "category": "creative",
+      "description": "Generate and evaluate names for products, brands, or features",
+      "file": "creative/naming-expert.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/creative/naming-expert.md"
+    },
+    {
+      "name": "World Builder",
+      "category": "creative",
+      "description": "Create detailed fictional worlds, lore, and settings",
+      "file": "creative/world-builder.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/creative/world-builder.md"
+    },
+    {
+      "name": "Curriculum Designer",
+      "category": "education",
+      "description": "Design a full course or learning curriculum on any topic",
+      "file": "education/curriculum-designer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/curriculum-designer.md"
+    },
+    {
+      "name": "Explainer",
+      "category": "education",
+      "description": "Explain any complex topic clearly at any audience level",
+      "file": "education/explainer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/explainer.md"
+    },
+    {
+      "name": "Quiz Maker",
+      "category": "education",
+      "description": "Generate multiple-choice and short-answer quizzes for any topic",
+      "file": "education/quiz-maker.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/quiz-maker.md"
+    },
+    {
+      "name": "Socratic Tutor",
+      "category": "education",
+      "description": "Teach any subject using questions and guided discovery",
+      "file": "education/tutor.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/tutor.md"
+    },
+    {
+      "name": "Meeting Notes Formatter",
+      "category": "productivity",
+      "description": "Transform raw meeting notes or transcripts into structured action-ready summaries",
+      "file": "productivity/meeting-notes.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/productivity/meeting-notes.md"
+    },
+    {
+      "name": "SOP Writer",
+      "category": "productivity",
+      "description": "Generate clear, repeatable Standard Operating Procedures",
+      "file": "productivity/sop-writer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/productivity/sop-writer.md"
+    },
+    {
+      "name": "Summarizer",
+      "category": "productivity",
+      "description": "Summarize any document, transcript, or long text with precision",
+      "file": "productivity/summarizer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/productivity/summarizer.md"
+    },
+    {
+      "name": "Task Planner",
+      "category": "productivity",
+      "description": "Break any goal into a prioritized, realistic task list",
+      "file": "productivity/task-planner.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/productivity/task-planner.md"
+    },
+    {
+      "name": "Deep Researcher",
+      "category": "research",
+      "description": "Exhaustive topic research with citations and synthesis",
+      "file": "research/deep-researcher.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/research/deep-researcher.md"
+    },
+    {
+      "name": "Fact Checker",
+      "category": "research",
+      "description": "Verify claims, identify misinformation, and audit sources",
+      "file": "research/fact-checker.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/research/fact-checker.md"
+    },
+    {
+      "name": "Literature Review Writer",
+      "category": "research",
+      "description": "Structured academic literature review on any topic",
+      "file": "research/literature-review.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/research/literature-review.md"
+    },
+    {
+      "name": "Editor",
+      "category": "writing",
+      "description": "Edit any piece of writing for clarity, tone, flow, and impact",
+      "file": "writing/editor.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/writing/editor.md"
+    },
+    {
+      "name": "Newsletter Writer",
+      "category": "writing",
+      "description": "Engaging email newsletter that readers actually open and finish",
+      "file": "writing/newsletter.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/writing/newsletter.md"
+    },
+    {
+      "name": "Storyteller",
+      "category": "writing",
+      "description": "Compelling narrative and long-form storytelling for any context",
+      "file": "writing/storyteller.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/writing/storyteller.md"
+    },
+    {
+      "name": "Technical Writer",
+      "category": "writing",
+      "description": "Clear, precise technical documentation for any product or system",
+      "file": "writing/technical-writer.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/writing/technical-writer.md"
+    }
+  ]
+}
