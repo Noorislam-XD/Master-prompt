@@ -6,6 +6,24 @@ Format: `[version] — date — description`
 
 ---
 
+## [1.4.0] — 2026-05-31
+
+### Added — `/openai`
+- `chain-of-thought.md` — Step-by-step reasoning before final answer
+- `few-shot.md` — Teach by example with input/output pairs
+- `structured-output.md` — Extract clean JSON from unstructured text
+- `text-classification.md` — Classify text into predefined categories
+- `summarization.md` — Multi-format document summarization
+- `code-generation.md` — Reliable, production-ready code generation
+- `function-calling.md` — Tool/function calling with schema definitions
+- `rag-grounding.md` — Answer from retrieved context only, no hallucination
+- `customer-service-agent.md` — Policy-following conversational support agent
+- `content-moderation.md` — Safety classification by category and severity
+- `persona.md` — Consistent character and knowledge boundary design
+- `text-transformation.md` — Rewrite, translate, reformat, or change tone
+
+---
+
 ## [1.3.0] — 2026-05-31
 
 ### Added
