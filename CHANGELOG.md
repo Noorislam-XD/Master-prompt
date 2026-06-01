@@ -6,6 +6,47 @@ Format: `[version] — date — description`
 
 ---
 
+## [1.5.0] — 2026-05-31
+
+### Added — `/anthropic`
+- `xml-tagging.md` — XML tags for structured, unambiguous Claude prompts
+- `extended-thinking.md` — Claude extended thinking API for hard reasoning tasks
+- `prompt-chaining.md` — Sequential sub-prompts with output handoffs
+- `document-qa.md` — Document Q&A with precise citations
+- `role-prompting.md` — Expert persona assignment for domain tasks
+- `prefill.md` — Response prefilling to control output format precisely
+
+### Added — `/google`
+- `step-back.md` — Abstract to principles before solving specific questions
+- `self-consistency.md` — Majority-vote across multiple reasoning paths
+- `least-to-most.md` — Decompose hard problems into sequential sub-problems
+- `multimodal.md` — Combine text + image inputs for vision tasks
+- `system-instruction.md` — Gemini system instruction best practices
+- `zero-shot-cot.md` — Trigger CoT reasoning with a single phrase
+
+### Added — `/microsoft`
+- `meta-prompt.md` — Prompt that generates optimized prompts for any task
+- `grounding.md` — Anchor responses to trusted sources with Azure AI Search
+- `safety-system-message.md` — Microsoft's recommended safety layer template
+- `prompt-injection-defense.md` — Defend against adversarial instruction attacks
+- `copilot-extension.md` — Microsoft 365 Copilot extension design
+
+### Added — `/meta`
+- `llama3-chat-template.md` — Official Llama 3 instruct message format
+- `llama3-system-prompt.md` — Effective system prompt structure for Llama 3
+- `code-llama.md` — Code Llama prompt formats for all variants
+- `safety-guardrails.md` — Llama Guard safety classification approach
+
+### Added — `/prompt-engineering`
+- `react.md` — ReAct: interleaved reasoning and tool-use for agents
+- `tree-of-thoughts.md` — Explore multiple reasoning branches simultaneously
+- `self-refine.md` — Iterative output improvement through self-critique
+- `automatic-prompt-engineer.md` — AI-generated and evaluated prompt optimization
+- `directional-stimulus.md` — Subtle hints to guide without constraining
+- `generated-knowledge.md` — Generate background facts before answering
+
+---
+
 ## [1.4.0] — 2026-05-31
 
 ### Added — `/openai`
