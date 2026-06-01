@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Discussion
+    url: https://github.com/Noorislam-XD/Master-prompt/discussions
+    about: Ask questions, share how you're using the prompts, and discuss ideas
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/Noorislam-XD/Master-prompt/security/advisories/new
+    about: Report a security issue privately — do not open a public issue
