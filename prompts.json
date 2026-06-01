@@ -1,12 +1,13 @@
 {
-  "version": "1.0.0",
-  "total": 32,
+  "version": "1.4.0",
+  "total": 44,
   "categories": [
     "agents",
     "business",
     "coding",
     "creative",
     "education",
+    "openai",
     "productivity",
     "research",
     "writing"
@@ -158,6 +159,102 @@
       "description": "Teach any subject using questions and guided discovery",
       "file": "education/tutor.md",
       "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/education/tutor.md"
+    },
+    {
+      "name": "Chain-of-Thought Reasoning",
+      "category": "openai",
+      "description": "Force the model to reason step by step before giving a final answer",
+      "file": "openai/chain-of-thought.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/chain-of-thought.md",
+      "technique": "Chain-of-Thought (CoT)"
+    },
+    {
+      "name": "Code Generation",
+      "category": "openai",
+      "description": "Generate reliable, well-commented, production-ready code",
+      "file": "openai/code-generation.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/code-generation.md",
+      "technique": "Code Generation"
+    },
+    {
+      "name": "Content Moderation",
+      "category": "openai",
+      "description": "Classify text by safety category and severity level",
+      "file": "openai/content-moderation.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/content-moderation.md",
+      "technique": "Content Moderation / Safety Classification"
+    },
+    {
+      "name": "Customer Service Agent",
+      "category": "openai",
+      "description": "A consistent, policy-following support agent that handles common requests gracefully",
+      "file": "openai/customer-service-agent.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/customer-service-agent.md",
+      "technique": "Conversational Agent / System Prompt Design"
+    },
+    {
+      "name": "Few-Shot Prompting",
+      "category": "openai",
+      "description": "Teach the model the exact pattern you want by providing input/output examples",
+      "file": "openai/few-shot.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/few-shot.md",
+      "technique": "Few-Shot Learning"
+    },
+    {
+      "name": "Function / Tool Calling",
+      "category": "openai",
+      "description": "Define tools the model can invoke to take real-world actions",
+      "file": "openai/function-calling.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/function-calling.md",
+      "technique": "Function Calling / Tool Use"
+    },
+    {
+      "name": "Persona / Character Consistency",
+      "category": "openai",
+      "description": "Maintain a consistent character, voice, and knowledge boundary across a conversation",
+      "file": "openai/persona.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/persona.md",
+      "technique": "Persona Design"
+    },
+    {
+      "name": "RAG Context Grounding",
+      "category": "openai",
+      "description": "Answer questions using only retrieved context \u2014 no hallucination",
+      "file": "openai/rag-grounding.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/rag-grounding.md",
+      "technique": "Retrieval-Augmented Generation (RAG)"
+    },
+    {
+      "name": "Structured Output / JSON Extraction",
+      "category": "openai",
+      "description": "Extract clean, typed JSON from unstructured text reliably",
+      "file": "openai/structured-output.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/structured-output.md",
+      "technique": "Structured Output"
+    },
+    {
+      "name": "Summarization",
+      "category": "openai",
+      "description": "Condense any document at a specified length and detail level",
+      "file": "openai/summarization.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/summarization.md",
+      "technique": "Summarization"
+    },
+    {
+      "name": "Text Classification",
+      "category": "openai",
+      "description": "Classify any text into predefined categories with confidence",
+      "file": "openai/text-classification.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/text-classification.md",
+      "technique": "Classification"
+    },
+    {
+      "name": "Text Transformation",
+      "category": "openai",
+      "description": "Rewrite, translate, reformat, or change the tone of any text",
+      "file": "openai/text-transformation.md",
+      "url": "https://github.com/Noorislam-XD/Master-prompt/blob/main/openai/text-transformation.md",
+      "technique": "Text Transformation"
     },
     {
       "name": "Meeting Notes Formatter",
