@@ -17,6 +17,11 @@ A curated, open-source collection of reusable master prompts organized by catego
 | [`/creative`](./creative/) | Brainstorming, ideation, world-building, design briefs |
 | [`/agents`](./agents/) | Multi-agent workflows, AI factory pipelines, automation |
 | [`/openai`](./openai/) | OpenAI prompt packs — CoT, few-shot, RAG, function calling, and more |
+| [`/anthropic`](./anthropic/) | Anthropic/Claude — XML tagging, extended thinking, prompt chaining |
+| [`/google`](./google/) | Google/Gemini — step-back, self-consistency, least-to-most, multimodal |
+| [`/microsoft`](./microsoft/) | Microsoft/Azure — meta prompts, grounding, safety, injection defense |
+| [`/meta`](./meta/) | Meta/Llama — Llama 3 chat template, Code Llama, Llama Guard |
+| [`/prompt-engineering`](./prompt-engineering/) | Universal advanced techniques — ReAct, Tree of Thoughts, Self-Refine, APE |
 
 ---
 
@@ -47,6 +52,11 @@ Categories available:
 - /creative     → Brainstorming, ideation, world-building, design briefs
 - /agents       → Multi-agent workflows, AI factory pipelines, automation
 - /openai       → OpenAI prompt packs: CoT, few-shot, RAG, function calling, moderation
+- /anthropic    → Claude: XML tagging, extended thinking, prompt chaining, prefilling
+- /google       → Gemini: step-back, self-consistency, least-to-most, multimodal
+- /microsoft    → Azure/Copilot: meta prompts, grounding, safety, injection defense
+- /meta         → Llama 3 chat template, Code Llama, Llama Guard safety classification
+- /prompt-engineering → Universal: ReAct, Tree of Thoughts, Self-Refine, APE, DSP
 
 When I describe my goal, do the following:
 1. Identify which category fits best and explain why.
