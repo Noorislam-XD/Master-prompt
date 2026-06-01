@@ -16,6 +16,7 @@ A curated, open-source collection of reusable master prompts organized by catego
 | [`/education`](./education/) | Teaching, tutoring, curriculum design, quizzes |
 | [`/creative`](./creative/) | Brainstorming, ideation, world-building, design briefs |
 | [`/agents`](./agents/) | Multi-agent workflows, AI factory pipelines, automation |
+| [`/openai`](./openai/) | OpenAI prompt packs — CoT, few-shot, RAG, function calling, and more |
 
 ---
 
@@ -45,6 +46,7 @@ Categories available:
 - /education    → Teaching, tutoring, curriculum design, quizzes
 - /creative     → Brainstorming, ideation, world-building, design briefs
 - /agents       → Multi-agent workflows, AI factory pipelines, automation
+- /openai       → OpenAI prompt packs: CoT, few-shot, RAG, function calling, moderation
 
 When I describe my goal, do the following:
 1. Identify which category fits best and explain why.
